@@ -116,6 +116,5 @@ After the build process finishes, you will find all the output files in a new `o
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-[TODO]: Replace `Your Name` with your actual name or GitHub username.
-Copyright (c) 2023 - Your Name
+Copyright (c) 2023 - elmehdi
 ```
