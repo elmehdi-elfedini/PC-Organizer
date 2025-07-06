@@ -59,10 +59,9 @@ To get a local copy up and running for development purposes, follow these simple
 ### Installation & Running
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/pc-organizer.git
+   git clone https://github.com/elmehdi-elfedin/pc-organizer.git
    cd pc-organizer
    ```
-   [TODO]: Replace `your-username/pc-organizer.git` with your actual repository URL.
 
 2. **Install NPM packages:**
    This will install all the necessary dependencies, including Electron.
