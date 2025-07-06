@@ -11,7 +11,7 @@ A sleek, modern desktop application built with Electron to help you intelligentl
 ---
 
 
-![PC Organizer Screenshot](docs/screenshot.png)
+![PC Organizer Screenshot](docs/Screenshot.png)
 
 ## 🌟 Key Features
 
