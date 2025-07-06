@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Organizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+    <div class="bg-particles" id="particles"></div>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon" id="logo-icon-svg"></div>
+                <span>Organizer</span>
+            </div>
+            <nav class="nav-pills">
+                <button class="nav-pill active" data-view="home">Home</button>
+                <button class="nav-pill" data-view="files">Files</button>
+                <button class="nav-pill" data-view="settings">Settings</button>
+                <button class="nav-pill" data-view="history">History</button>
+            </nav>
+            <div class="header-tools"></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Home View -->
+        <div id="home-view" class="view active">
+            <div class="welcome-section">
+                <h1 class="welcome-title">Organize Your Digital Space</h1>
+                <p class="welcome-subtitle">Start with a common task or browse for any folder.</p>
+            </div>
+            <div class="action-cards-welcome">
+                <div class="action-card" id="browse-folder-welcome">
+                    <div class="card-icon" id="browse-folder-icon"></div>
+                    <h3 class="card-title">Browse a Folder</h3>
+                    <p class="card-description">Select any folder on your computer to begin.</p>
+                </div>
+                <div class="action-card" id="custom-rules-btn">
+                    <div class="card-icon" id="custom-rules-icon"></div>
+                    <h3 class="card-title">Customize Rules</h3>
+                    <p class="card-description">Edit, add, or delete your organization rules.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Files View -->
+        <div id="files-view" class="view hidden">
+            <div id="files-prompt" class="centered-prompt">
+                <div class="prompt-icon" id="prompt-folder-icon"></div>
+                <h2>No Folder Selected</h2>
+                <p>Browse for a folder from the Home page to view its contents.</p>
+            </div>
+            <div id="main-content-wrapper" class="hidden">
+                <div id="main-actions-panel">
+                     <div class="action-card-small" id="browse-folder">
+                        <div class="card-icon-small" id="browse-folder-icon-small"></div>
+                        <h3 class="card-title-small">Browse New Folder</h3>
+                    </div>
+                     <div class="action-card-small" id="organize-now">
+                        <div class="card-icon-small" id="organize-now-icon"></div>
+                        <h3 class="card-title-small">Smart Organize</h3>
+                    </div>
+                </div>
+                <div class="file-list" id="file-list-wrapper">
+                    <div class="file-list-header">
+                        <h3>Current Folder: <span id="current-path-display"></span></h3>
+                        <button class="icon-btn" id="refresh-btn" title="Refresh Current Folder"></button>
+                    </div>
+                    <div id="file-items-container" class="file-tree"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings View -->
+        <div id="settings-view" class="view hidden">
+            <div class="welcome-section">
+                <h1 class="welcome-title">Settings</h1>
+                <p class="welcome-subtitle">Customize your organization rules and preferences.</p>
+            </div>
+            <div class="settings-panel">
+                <div class="settings-group">
+                    <label class="settings-label">Appearance</label>
+                    <div class="setting-item">
+                        <span>Toggle Light / Dark Theme</span>
+                        <button class="icon-btn" id="theme-toggle" title="Toggle Theme"></button>
+                    </div>
+                </div>
+                <div class="settings-group">
+                    <label class="settings-label">Add New Category</label>
+                    <input type="text" class="settings-input" id="category-name-input" placeholder="Category Name (e.g., Fonts)">
+                    <input type="text" class="settings-input" id="category-extensions-input" placeholder="Extensions, comma-separated (.ttf, .otf)">
+                    <button class="btn btn-primary" id="add-category-btn">Add Category</button>
+                </div>
+                <div id="settings-rules-list"></div>
+                
+                <div class="settings-group ">
+                    <button class="btn btn-secondary" id="reset-settings-btn">Reset to Defaults</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- History View -->
+        <div id="history-view" class="view hidden">
+            <div class="history-header">
+                <div class="welcome-section">
+                    <h1 class="welcome-title">Activity History</h1>
+                    <p class="welcome-subtitle">A timeline of your organization actions.</p>
+                </div>
+                <button class="btn btn-secondary" id="clear-history-btn">
+                    <span id="clear-history-icon"></span> Clear All History
+                </button>
+            </div>
+            <div id="history-timeline-container"></div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="modal-container" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header" id="modal-header"><h2 class="modal-title" id="modal-title"></h2></div>
+            <div class="modal-body"><p id="modal-body"></p></div>
+            <div class="modal-footer" id="modal-footer">
+                <button class="btn btn-secondary" id="modal-cancel-btn">Cancel</button>
+                <button class="btn btn-primary" id="modal-confirm-btn">OK</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Toast Notification Container -->
+    <div id="toast-container"></div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

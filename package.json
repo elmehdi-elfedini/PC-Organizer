@@ -1,0 +1,15 @@
+{
+  "name": "organizer-pro",
+  "version": "1.0.0",
+  "description": "A modern file organizer.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "mehdi",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^37.2.0"
+  }
+}
