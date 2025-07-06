@@ -59,7 +59,7 @@ To get a local copy up and running for development purposes, follow these simple
 ### Installation & Running
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/elmehdi-elfedin/pc-organizer.git
+   git clone https://github.com/elmehdi-elfedin/PC-Organizer.git
    cd pc-organizer
    ```
 
@@ -116,4 +116,4 @@ After the build process finishes, you will find all the output files in a new `o
 Distributed under the MIT License. See `LICENSE` for more information.
 
 Copyright (c) 2023 - elmehdi
-```
+
